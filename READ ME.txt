@@ -1,0 +1,23 @@
+Assignment
+
+1. This is an Android Studio project written in kotlin.
+2. I have been able to build and run the project.
+3. However it might need some configuration to run in your Android Studio, maybe you need to install the kotlin plugin if you haven't
+4. The actual solution is in the urlparser module.
+5. The urlparser module contains the file UrlParser.kt which contains the two functions "parseUrlString" and "parseQuery" and some private helper functions.
+6. "parseUrlString" should parse an url string similar to "java.net.URL" in some (but not all) circumstances. It returns a map with keys and values as specified in the assignment.
+7. "parseQuery" returns a map with keys and values as specified in the assigment.
+8. Under src => test => jonatan => rhodin => urlparser two test files with unit tests for the two above mentioned functions
+9. The tests for "parseUrlString" is not exhaustive, but covers all cases I could come up with my limited imagination
+10. The module app contains a small android interface to parse url strings and url queries.
+11. It it outside the scope of the assignment, but I wanted to show that I am capable to write well structured android applications as well. Also I wanted to try out MvRx (https://github.com/airbnb/MvRx)
+12. The app does 3 things:
+a) Enables the user to put in an url and parse it or show an error if the parsing was not successful
+b) Parse url queries and show the results as a list of keys and values
+c) Copy the query part of the url in the url inputfield to the query field so that the query can be parsed seperately
+13. As mentioned above I use MvRx. MvRx uses State(a data class), ViewModel and View (a fragment) as basic architectural components.
+14. The parsing of the url and the query is done on a background thread, which is probably not necessary as they should be rather fast.
+15. Currently it redraws the whole view every time the state is updated, which is not ideal.
+16. A potential solution to this would be to make more different kind of states. For example one could be "showParsedUrldata" and so on.
+17. I'm not 100% sure if this would introduce some bugs with and also I was running out of time, so this solution was good enough.
+

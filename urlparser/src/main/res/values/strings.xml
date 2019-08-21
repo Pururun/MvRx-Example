@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UrlParser</string>
+    <string name="key_to_value">%s => %s</string>
+
+    <!-- Translatable strings -->
+    <string name="input_url_hint">Input url here</string>
+    <string name="parse_url">Parse url</string>
+    <string name="query_hint">Query</string>
+    <string name="parse_query">Parse query</string>
+    <string name="copy_from_url">Copy from url</string>
+    <string name="url_error">Could not parse url</string>
+    <string name="query_error">Could not parse query</string>
+</resources>
